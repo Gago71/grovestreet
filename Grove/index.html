@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grove Street</title>
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: url('img/gang.jpg') no-repeat center center fixed; /* imagem de fundo */
+            background-size: cover;
+            filter: brightness(0.8); /* escurece a imagem para melhor legibilidade */
+        }
+        .img img {
+            width: 150px;  
+            height: 150px; 
+            display: block;
+            margin: 5% auto;
+            border-radius: 50%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+        }
+        .cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .cont a {
+            text-decoration: none;
+            width: 100%;
+        }
+        .cont button {
+            border-radius: 10px;
+            color: white;
+            background-color: #2ecc71; /* verde inspirado no Grove Street */
+            border: none;
+            padding: 15px 25px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        .cont button:hover {
+            background-color: #27ae60; /* verde mais escuro ao passar o mouse */
+            transform: scale(1.05);
+        }
+        .cont button::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            top: 0;
+            left: 0;
+            transition: width 0.3s;
+            border-radius: 10px;
+            z-index: 0;
+        }
+        .cont button:hover::after {
+            width: 100%;
+        }
+        .cont button span {
+            position: relative;
+            z-index: 1;
+        }
+        .central {
+            width: 90%;
+            max-width: 600px;
+            border: 5px solid #27ae60; /* borda verde */
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            background-color: rgba(44, 62, 80, 0.8);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #e74c3c; /* vermelho vibrante */
+        }
+    </style>
+</head>
+<body>
+    <div class="central">
+        <div class="img">
+            <img src="img/logo.jpg" alt="Logo">
+        </div>
+        <div class="cont">
+            <fieldset>
+                <h1>Bem Vindo à Grove Street!</h1>
+                <a href="historia.html"><button><span>História</span></button></a>
+                <a href="fundadores.html"><button><span>Fundadores</span></button></a>
+                <a href="favelas.html"><button><span>Favelas</span></button></a>
+                <a href="lideres.html"><button><span>Líderes</span></button></a>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
